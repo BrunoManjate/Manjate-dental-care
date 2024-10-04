@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manjate Dental Care</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Cabeçalho (Header) -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Manjate Dental Care">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#testemunhos">Testemunhos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="cta">
+            <a href="#agendar" class="btn-agendar">Marcar Consulta</a>
+        </div>
+    </header>
+
+    <!-- Banner Principal (Hero Section) -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Bem-vindo à Manjate Dental Care</h1>
+            <p>Cuidando do seu sorriso com a mais alta tecnologia e atendimento personalizado.</p>
+            <div class="cta-buttons">
+                <a href="#agendar" class="btn-primary">Agendar Consulta</a>
+                <a href="#servicos" class="btn-secondary">Explorar Serviços</a>
+            </div>
+        </div>
+    </section>
+
+        <!-- Seção Sobre Nós (About Us) -->
+        <section id="sobre-nos">
+            <div class="sobre-content">
+                <h2>Sobre Nós</h2>
+                <p>
+                    Na Manjate Dental Care, temos como missão proporcionar um atendimento odontológico de excelência,
+                    utilizando tecnologia avançada e oferecendo um ambiente acolhedor. Desde a nossa fundação, nos
+                    dedicamos a cuidar da saúde bucal de nossos pacientes, sempre priorizando seu conforto e bem-estar.
+                </p>
+                <div class="video-container">
+                    <video controls>
+                        <source src="image/Letreiro animado bem vindo ao canal gamer colorido video.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+                <h3>Diferenciais da Clínica</h3>
+                <ul>
+                    <li>Tecnologia Avançada</li>
+                    <li>Atendimento Personalizado</li>
+                    <li>Especialidades Odontológicas</li>
+                    <li>Ambiente Aconchegante</li>
+                </ul>
+            </div>
+            <div class="sobre-imagens">
+                <img src="image/a-photo-of-a-dental-office-with-a-modern-interior--4dJSJSvUQhmeagaz2LeWKg--pLYLUhNSZWY4n1hZnmXvg.jpeg" alt="Dentista em ação" class="sobre-imagem">
+                <img src="image/a-photo-of-professionals-dressed-in-manjate-dental-8jk82Se9SqiL81FuT-B3Qg-znfUZZwnQLKNrkMJMxDp7w.jpeg" alt="Paciente sendo atendido" class="sobre-imagem">
+            </div>
+        </section>
+
+            <!-- Seção Serviços (Services) -->
+            <section id="servicos">
+                <div class="servicos-content">
+                    <h2>Nossos Serviços</h2>
+                    <div class="servicos-lista">
+                        <div class="servico-item">
+                            <img src="icone-limpeza.png" alt="Limpeza Dentária" class="servico-icone">
+                            <h3>Limpeza Dentária</h3>
+                            <p>Limpeza profissional para manter seus dentes saudáveis.</p>
+                            <a href="#limpeza" class="btn-detalhes">Ver Detalhes</a>
+                        </div>
+                        <div class="servico-item">
+                            <img src="icone-ortodontia.png" alt="Ortodontia" class="servico-icone">
+                            <h3>Ortodontia</h3>
+                            <p>Correção de dentes e mandíbulas com aparelhos ortodônticos.</p>
+                            <a href="#ortodontia" class="btn-detalhes">Ver Detalhes</a>
+                        </div>
+                        <div class="servico-item">
+                            <img src="icone-implantes.png" alt="Implantes" class="servico-icone">
+                            <h3>Implantes</h3>
+                            <p>Substituição de dentes perdidos com implantes dentários.</p>
+                            <a href="#implantes" class="btn-detalhes">Ver Detalhes</a>
+                        </div>
+                        <!-- Adicione mais serviços conforme necessário -->
+                    </div>
+                </div>
+            </section>
+
+                <!-- Seção Reservas (Booking) -->
+                <section id="reservas">
+                    <div class="reservas-content">
+                        <h2>Reserve sua Consulta</h2>
+                        <form id="formReserva" onsubmit="return enviarReserva()">
+                            <label for="nomeReserva">Nome:</label>
+                            <input type="text" id="nomeReserva" name="nomeReserva" required placeholder="Digite seu nome">
+                
+                            <label for="emailReserva">Email:</label>
+                            <input type="email" id="emailReserva" name="emailReserva" required placeholder="Digite seu email">
+                
+                            <label for="dataReserva">Data da Consulta:</label>
+                            <input type="date" id="dataReserva" name="dataReserva" required>
+                
+                            <label for="horaReserva">Hora da Consulta:</label>
+                            <input type="time" id="horaReserva" name="horaReserva" required>
+                
+                            <label for="observacoesReserva">Observações:</label>
+                            <textarea id="observacoesReserva" name="observacoesReserva"
+                                placeholder="Digite suas observações (opcional)"></textarea>
+                
+                            <button type="submit">Reservar</button>
+                            <div id="resultadoReserva" class="resultado"></div>
+                        </form>
+                    </div>
+                </section>
+
+
+         <!-- Seção Testemunhos (Testimonials) -->
+        <section id="testemunhos">
+        <div class="testemunhos-content">
+            <h2>O Que Nossos Pacientes Dizem</h2>
+            <div class="carrossel">
+                <div class="depoimento ativo">
+                    <p>"A Manjate Dental Care me deu um sorriso novo! O atendimento é excelente!"</p>
+                    <h4>- João Silva</h4>
+                </div>
+                <div class="depoimento">
+                    <p>"Minha experiência foi incrível! Profissionais atenciosos e bem equipados."</p>
+                    <h4>- Maria Fernandes</h4>
+                </div>
+                <div class="depoimento">
+                    <p>"Senti-me confortável e seguro durante todo o tratamento. Recomendo!"</p>
+                    <h4>- Carlos Mendes</h4>
+                </div>
+                <div class="navegacao">
+                    <button class="prev" onclick="mudaDepoimento(-1)">&#10094;</button>
+                    <button class="next" onclick="mudaDepoimento(1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Equipe (Team) -->
+    <section id="equipe">
+        <div class="equipe-content">
+            <h2>Nossa Equipe</h2>
+            <div class="membros-equipe">
+                <div class="membro">
+                    <img src="dentista1.jpg" alt="Dr. Paulo Costa" class="foto-membro">
+                    <h3>Dr. Paulo Costa</h3>
+                    <p>Especialista em Ortodontia com mais de 10 anos de experiência.</p>
+                </div>
+                <div class="membro">
+                    <img src="dentista2.jpg" alt="Dra. Ana Santos" class="foto-membro">
+                    <h3>Dra. Ana Santos</h3>
+                    <p>Cirurgiã-dentista dedicada ao atendimento infantil.</p>
+                </div>
+                <div class="membro">
+                    <img src="dentista3.jpg" alt="Dr. Miguel Almeida" class="foto-membro">
+                    <h3>Dr. Miguel Almeida</h3>
+                    <p>Especialista em Implantes Dentários e Reabilitação Oral.</p>
+                </div>
+            </div>
+        </div>
+      
+        
+        <!-- Seção Galeria (Gallery) -->
+        <section id="galeria">
+                <div class="galeria-content">
+                    <h2>Nossa Galeria</h2>
+                    <div class="galeria-grid">
+                        <img src="foto1.jpg" alt="Foto da clínica" class="galeria-img" onclick="abreModal(1)">
+                        <img src="foto2.jpg" alt="Foto do consultório" class="galeria-img" onclick="abreModal(2)">
+                        <img src="foto3.jpg" alt="Equipe em ação" class="galeria-img" onclick="abreModal(3)">
+                        <img src="foto4.jpg" alt="Paciente sorrindo" class="galeria-img" onclick="abreModal(4)">
+                    </div>
+                </div>
+            
+                <!-- Modal da Galeria -->
+                <div id="modalGaleria" class="modal">
+                    <span class="fechar" onclick="fechaModal()">&times;</span>
+                    <img class="modal-conteudo" id="imagemModal">
+                    <div id="caption"></div>
+                    <button class="fechar-modal" onclick="fechaModal()">Fechar</button>
+                </div>
+        </section>
+
+        
+        <!-- Seção Contato (Contact) -->
+            <!-- Seção Contato (Contact) -->
+            <section id="contato">
+                <div class="contato-content">
+                    <h2>Entre em Contato</h2>
+                    <div class="contato-container">
+                        <!-- Formulário de Contato -->
+                        <div class="formulario-contato">
+                            <form id="formContato" onsubmit="return enviarFormulario()">
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+            
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required placeholder="Digite seu email">
+            
+                                <label for="telefone">Telefone:</label>
+                                <input type="tel" id="telefone" name="telefone" required placeholder="Digite seu telefone"
+                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            
+                                <label for="assunto">Assunto:</label>
+                                <input type="text" id="assunto" name="assunto" required placeholder="Digite o assunto">
+            
+                                <label for="mensagem">Mensagem:</label>
+                                <textarea id="mensagem" name="mensagem" required placeholder="Digite sua mensagem"></textarea>
+            
+                                <button type="submit">Enviar</button>
+                                <div id="resultado" class="resultado"></div>
+                            </form>
+                        </div>
+            
+                        <!-- Mapa Interativo -->
+                        <div class="mapa">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193571.43897476672!2d-74.11808562731344!3d40.70562579999192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316f50b231%3A0x4a7b7465b27b413e!2sManjate%20Dental%20Care!5e0!3m2!1sen!2sus!4v1695945588963!5m2!1sen!2sus"
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+     <!-- Rodapé (Footer) -->
+        <footer>
+                <div class="rodape-content">
+                    <div class="informacoes-contato">
+                        <h3>Contato</h3>
+                        <p><strong>Endereço:</strong> Rua Exemplo, 123, Cidade, País</p>
+                        <p><strong>Telefone:</strong> +258 84 123 4567</p>
+                        <p><strong>Email:</strong> contato@manjatidentalcare.co.mz</p>
+                    </div>
+                    <div class="redes-sociais">
+                        <h3>Redes Sociais</h3>
+                        <a href="https://www.facebook.com/manjatidentalcare" target="_blank">Facebook</a>
+                        <a href="https://www.instagram.com/manjatidentalcare" target="_blank">Instagram</a>
+                        <a href="https://www.twitter.com/manjatidentalcare" target="_blank">Twitter</a>
+                        <a href="https://www.linkedin.com/company/manjatidentalcare" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+                <p>&copy; 2024 Manjate Dental Care. Todos os direitos reservados.</p>
+            </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

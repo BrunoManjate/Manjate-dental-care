@@ -1,0 +1,676 @@
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #4A4A4A;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #6CCFF6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #76C893;
+}
+
+.cta .btn-agendar {
+    background-color: #76C893;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta .btn-agendar:hover {
+    background-color: #92D4AA;
+}
+
+/* Banner Principal (Hero Section) */
+#hero {
+    background: url('image/a-photo-of-a-dental-office-with-a-modern-interior--4dJSJSvUQhmeagaz2LeWKg--pLYLUhNSZWY4n1hZnmXvg.jpeg') center center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Escurecendo a imagem de fundo */
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cta-buttons a {
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #76C893;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #92D4AA;
+}
+
+.btn-secondary {
+    background-color: #FFFFFF;
+    color: #4A4A4A;
+}
+
+.btn-secondary:hover {
+    background-color: #f0f0f0;
+}
+
+/* Efeitos de Animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Seção Sobre Nós (About Us) */
+#sobre-nos {
+    padding: 60px 50px;
+    background-color: #FFFFFF;
+    /* Fundo branco */
+    color: #4A4A4A;
+    /* Texto em cinza escuro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sobre-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.sobre-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.sobre-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.video-container {
+    margin: 20px 0;
+}
+
+video {
+    max-width: 100%;
+    /* Responsivo */
+    border-radius: 5px;
+}
+
+.sobre-imagens {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.sobre-imagem {
+    max-width: 350px;
+    /* Limitar a largura das imagens */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    margin-top: 30px;
+    font-size: 1.8rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Seção Serviços (Services) */
+#servicos {
+    padding: 60px 50px;
+    background-color: #F5F5F5;
+    /* Fundo suave */
+    text-align: center;
+}
+
+.servicos-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.servicos-lista {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* Permite que os itens se movam para uma nova linha se não houver espaço */
+    margin-top: 30px;
+}
+
+.servico-item {
+    background-color: #FFFFFF;
+    /* Fundo branco para os itens */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 220px;
+    /* Largura fixa para os itens */
+    margin: 15px;
+    /* Espaçamento entre os itens */
+    transition: transform 0.2s ease;
+    /* Animação ao passar o mouse */
+}
+
+.servico-item:hover {
+    transform: translateY(-5px);
+    /* Leve movimento para cima ao passar o mouse */
+}
+
+.servico-icone {
+    max-width: 60px;
+    /* Tamanho dos ícones */
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin: 15px 0;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.btn-detalhes {
+    background-color: #76C893;
+    /* Cor do botão */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-detalhes:hover {
+    background-color: #92D4AA;
+    /* Tom mais claro no hover */
+}
+
+/* Seção Reservas (Booking) */
+#reservas {
+    padding: 60px 50px;
+    background-color: #F5F5F5;
+    text-align: center;
+}
+
+.reservas-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.reservas-content h2 {
+    margin-bottom: 30px;
+}
+
+.reservas-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reservas-content label {
+    margin: 10px 0 5px;
+    font-size: 1rem;
+}
+
+.reservas-content input,
+.reservas-content textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.reservas-content button {
+    padding: 10px 20px;
+    background-color: #76C893;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.reservas-content button:hover {
+    background-color: #92D4AA;
+}
+
+.resultado {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: green;
+}
+
+/* Seção Testemunhos (Testimonials) */
+#testemunhos {
+    padding: 60px 50px;
+    background-color: #F5F5F5; /* Fundo suave */
+    text-align: center;
+}
+
+.testemunhos-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carrossel {
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.depoimento {
+    display: none; /* Ocultar todos os depoimentos inicialmente */
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.depoimento.ativo {
+    display: block; /* Mostrar apenas o depoimento ativo */
+}
+
+.navegacao {
+    margin-top: 20px;
+}
+
+.navegacao button {
+    background-color: #76C893;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.navegacao button:hover {
+    background-color: #92D4AA;
+}
+
+/* Seção Equipe (Team) */
+#equipe {
+    padding: 60px 50px;
+    background-color: #FFFFFF; /* Fundo branco */
+    text-align: center;
+}
+
+.equipe-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.membros-equipe {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que os itens se movam para uma nova linha se não houver espaço */
+    margin-top: 30px;
+}
+
+.membro {
+    background-color: #F5F5F5; /* Fundo suave para os membros */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    width: 220px; /* Largura fixa para os membros */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.foto-membro {
+    max-width: 100%; /* Responsivo */
+    border-radius: 50%; /* Imagens em forma de círculo */
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+p {
+    font-size: 0.9rem;
+}
+
+/* Seção Galeria (Gallery) */
+#galeria {
+    padding: 60px 50px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.galeria-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Grade de 2 colunas */
+    gap: 15px;
+    /* Espaçamento entre as imagens */
+}
+
+.galeria-img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.galeria-img:hover {
+    transform: scale(1.05);
+    /* Aumenta um pouco no hover */
+}
+
+/* Modal da Galeria */
+.modal {
+    display: none;
+    /* Oculto por padrão */
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fundo escuro */
+}
+
+.modal-conteudo {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+.fechar {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#caption {
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+/* Modal da Galeria */
+.modal {
+    display: none;
+    /* Oculto por padrão */
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fundo escuro */
+}
+
+.modal-conteudo {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+.fechar {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#caption {
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.fechar-modal {
+    display: block;
+    margin: 20px auto;
+    /* Centraliza o botão */
+    padding: 10px 20px;
+    background-color: #76C893;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.fechar-modal:hover {
+    background-color: #92D4AA;
+}
+
+/* Seção Contato (Contact) */
+#contato {
+    padding: 60px 50px;
+    background-color: #F5F5F5;
+    text-align: center;
+}
+
+.contato-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Responsivo */
+    margin-top: 30px;
+}
+
+.formulario-contato {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.formulario-contato form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-contato label {
+    margin: 10px 0 5px;
+    font-size: 1rem;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.formulario-contato input::placeholder,
+.formulario-contato textarea::placeholder {
+    color: #888;
+    /* Cor do placeholder */
+}
+
+.formulario-contato button {
+    padding: 10px 20px;
+    background-color: #76C893;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-contato button:hover {
+    background-color: #92D4AA;
+}
+
+.resultado {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: green;
+}
+
+.mapa {
+    flex: 1;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Rodapé (Footer) */
+footer {
+    background-color: #76C893;
+    color: white;
+    padding: 20px 50px;
+    text-align: center;
+}
+
+.rodape-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Responsivo */
+    margin-bottom: 15px;
+}
+
+.informacoes-contato,
+.redes-sociais {
+    flex: 1;
+    min-width: 200px;
+    /* Largura mínima */
+    margin: 10px;
+}
+
+.redes-sociais a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.redes-sociais a:hover {
+    text-decoration: underline;
+    /* Sublinhado no hover */
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
