@@ -27,4 +27,4 @@ In future updates, the project will incorporate:
 To try out the current version of the project:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/manjate-dental-care.git
+   git clone https://github.com/BrunoManjate/manjate-dental-care.git
